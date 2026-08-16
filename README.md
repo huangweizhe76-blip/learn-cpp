@@ -14,9 +14,9 @@ All content is for personal study only. No school assignments are published.
 
 ## 📁 仓库目录结构 | Structure
 learn‑cpp
-├── basic/ # C/C++ 基础语法练习
-├── luogu/ # 洛谷算法刷题（按专题分类）
-├── atcoder/ # AtCoder 竞赛练习
+├── cpp-basics/ # C/C++ 基础语法练习
+├── algorithm_practice/ # 算法刷题（按专题分类）
+├── date_structe/ # 数据结构
 ├── easyx‑proj/ # EasyX Windows 图形小项目
 └── notes.md # 踩坑、调试、经验汇总
 plaintext
@@ -26,8 +26,8 @@ plaintext
 
 learn‑cpp
 ├── basic/ # C/C++ basic syntax exercises
-├── luogu/ # Luogu algorithm problems(grouped by topics)
-├── atcoder/ # AtCoder contest practice
+├── algorithm_practice/ #  algorithm problems(grouped by topics)
+├── date_structe/ #date_structe practice
 ├── easyx‑proj/ # EasyX graphic demos for Windows
 └── notes.md # Pitfalls & debugging summary
 plaintext
