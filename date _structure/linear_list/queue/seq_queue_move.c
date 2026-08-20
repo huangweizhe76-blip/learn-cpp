@@ -6,9 +6,9 @@ typedef int ElemType;
 
 typedef struct
 {
-	ElemType* data;
-	int front;
-	int rear;
+	ElemType* data; //动态数组
+	int front; //队头下标，指向头元素
+	int rear;  队尾下表，下一个入队存放位置
 
 }Queue;
 
@@ -53,31 +53,31 @@ int queueFull(Queue* Q)
 {
 	if (Q->front > 0)
 	{
-		int step = Q->front;
-		for (int i = Q->front; i <= Q->rear; ++i)
+		int step = Q->front;  //需要向前移动的步数
+		for (int i = Q->front; i <= Q->rear; ++i)  
 		{
 			Q->data[i - step] = Q->data[i];
 		}
-		Q->front = 0;
-		Q->rear = Q->rear - step;
-		return 1;
+		Q->front = 0;  //队头归0
+		Q->rear = Q->rear - step;  //队尾跟着往前偏移step
+		return 1;  //偏移成功
 	}
 	else
 	{
 		printf("真的满了\n");
-		return 0;
+		return 0; //front已经等于0，前面没有空闲，数组真满
 	}
 }
 
 //入队
-int equeue(Queue* Q, ElemType e)
+int enqueue(Queue* Q, ElemType e)
 {
 
-	if (Q->rear >= MAXSIZE)
+	if (Q->rear >= MAXSIZE) //队尾下标抵达数组末尾，触发假满
 	{
-		if (!queueFull(Q))
+		if (!queueFull(Q)) //尝试向前搬移压缩
 		{
-			return 0;
+			return 0;  //搬移失败，数组真满，入队失败返回0
 		}
 	}
 	Q->data[Q->rear] = e;
